@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&subset=cyrillic');
-#wrapper {
-  font: 20pt 'Open Sans', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&subset=cyrillic'); #wrapper {
+    font: 20pt 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 a {
     display: inline-block;
-    color:#797979;
+    color: #797979;
     line-height: 1;
-    text-decoration:none;
+    text-decoration: none;
     cursor: pointer;
 }
+
 a:after {
     background-color: #fc7254;
     display: block;
@@ -23,120 +23,158 @@ a:after {
     -moz--transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
 }
-a:hover:after,
-a:focus:after {
+
+a:hover:after, a:focus:after {
     width: 100%;
 }
- /*Первая страница*/
+
 #header {
-  display: grid;
-  grid-template-columns: 70px 50px auto 50px 70px;
-  grid-template-rows: 40px 30px 140px auto;
-  width: 100%;
-  height: 900px;
-  background-color: #f5f5f5;
-}
-.logo {
-  width: 180px;
-  height: 50px;
-  grid-column: 2;
-  grid-row: 2 ;
+    display: grid;
+    grid-template-columns: 70px 50px auto 50px 70px;
+    grid-template-rows: 40px 30px 140px auto;
+    width: 100%;
+    height: 900px;
+    background-color: #f5f5f5;
 }
 
-/*---------Меню---------*/
+.logo {
+    width: 180px;
+    height: 50px;
+    grid-column: 2;
+    grid-row: 2 ;
+}
 
 .menu {
-  position: fixed;
-  right: 70px;
-  top: 70px;
+    position: fixed;
+    right: 70px;
+    top: 70px;
 }
+
 .hover-menu {
-  position: fixed;
-  right: 40px;
-  top: 90px;
-  display:none;
-  text-align: center;
-  
+    position: fixed;
+    right: 40px;
+    top: 90px;
+    display: none;
+    text-align: center;
 }
-.menu:hover .hover-menu
-{
-  display: block;
+
+.menu:hover .hover-menu {
+    display: block;
 }
+
 li {
-list-style-type: none; 
+    list-style-type: none;
 }
+
 ul {
-margin-left: 0; 
-padding-left: 0;
+    margin-left: 0;
+    padding-left: 0;
 }
 
-/*---------Меню---------*/
 .myBadget {
-  justify-self: center;
-  font: 50pt 'Open Sans', sans-serif;
-  color: #6f6f6f;
-  grid-column: 3;
-  grid-row: 3 ;
-}
-.center-wrap{
-  width: 680px;
-  height: 400px;
-  justify-self: center;
-  grid-column: 3;
-  grid-row: 4 ;
+    justify-self: center;
+    font: 50pt 'Open Sans', sans-serif;
+    color: #6f6f6f;
+    grid-column: 3;
+    grid-row: 3 ;
 }
 
-/*Вторая страница*/
+.center-wrap {
+    width: 680px;
+    height: 400px;
+    justify-self: center;
+    grid-column: 3;
+    grid-row: 4 ;
+}
+
 #workProcess {
-  width: 100%;
-  height: 900px;
-  background-color: #ffffff;
-  display: grid;
-  grid-template-columns: 70px  auto  70px;
-  grid-template-rows: 5px  auto; 
+    width: 100%;
+    height: 900px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 70px auto 70px;
+    grid-template-rows: 5px 250px auto;
 }
+
 .myAccount {
-  font: 50pt 'Open Sans', sans-serif;
-  color: #6f6f6f;
-  grid-column: 2;
-  grid-row: 1 ;
-  justify-self: center;
-
+    font: 50pt 'Open Sans', sans-serif;
+    color: #6f6f6f;
+    grid-column: 2;
+    grid-row: 1 ;
+    justify-self: center;
 }
-/*Вторая страница*/
-/*Третья страница*/
+
+.add {
+    position: fixed;
+    right: 70px;
+    bottom: 40px;
+}
+
+.form {
+    position: fixed;
+    right: 150px;
+    bottom: 65px;
+    display: flex;
+    flex-direction: row-reverse;
+    display: none;
+}
+
+.add:hover .form {
+    display: block;
+}
+
+#selectInput {
+    width: auto;
+    height: 40px;
+    padding: 0 15px;
+    border-width: 0;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    background: rgba(252, 114, 84, 0.79);
+}
+
+#NameInput {
+    width: auto;
+    height: 40px;
+    padding: 0 15px;
+    border-width: 0;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    background: rgba(121, 121, 121, 0.79);
+}
+
 #diagram {
-  width: 100%;
-  height: 920px;
-  background-color: #f5f5f5;
-  display: grid;
-  grid-template-columns: 70px  auto  70px;
-  grid-template-rows: 5px  auto; 
+    width: 100%;
+    height: 920px;
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template-columns: 70px auto 70px;
+    grid-template-rows: 5px auto;
 }
+
 .myDiagram {
-  font: 50pt 'Open Sans', sans-serif;
-  color: #6f6f6f;
-  grid-column: 2;
-  grid-row: 1 ;
-  justify-self: center;
-
+    font: 50pt 'Open Sans', sans-serif;
+    color: #6f6f6f;
+    grid-column: 2;
+    grid-row: 1 ;
+    justify-self: center;
 }
 
-/*Третья страница*/
-/*Четвертая страница*/
 #celend {
-  width: 100%;
-  height: 920px;
-  background-color: #ffffff;
-  display: grid;
-  grid-template-columns: 70px  auto  70px;
-  grid-template-rows: 5px  auto; 
+    width: 100%;
+    height: 920px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 70px auto 70px;
+    grid-template-rows: 5px auto;
 }
-.myCelend {
-  font: 50pt 'Open Sans', sans-serif;
-  color: #6f6f6f;
-  grid-column: 2;
-  grid-row: 1 ;
-  justify-self: center;
 
+.myCelend {
+    font: 50pt 'Open Sans', sans-serif;
+    color: #6f6f6f;
+    grid-column: 2;
+    grid-row: 1 ;
+    justify-self: center;
 }
