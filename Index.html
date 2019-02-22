@@ -4,23 +4,39 @@
 	<title>MyBudget</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/menu.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
 </head>
 <body>
 <div id="wrapper">
-		<div class="header">
+	<div id="header">
 		<img src="image/logo.png" alt="MyBudget" class="logo">
-		<img src="image/menu.png" alt="menu" class="menu">
-		<h1 class="myBadget"><font color="fc7254">MY</font> BUDGET</h1>
+			<div class="menu" id="menu">
+			<img src="image/menu.png" alt="menu">
+			<div class="hover-menu" >
+			<ul>
+				<li><a href="#header">Home</a></li>
+				<li><a href="#workProcess">Accounts</a></li>
+				<li><a href="#diagram">Diagram</a></li>
+				<li><a href="#celend">Calendar</a></li>
+			</ul>
+			</div>
+			</div>
+		<h1 class="myBadget"><a><font color="fc7254">MY</font> BUDGET</a></h1>
 		<img src="image/center-wrap.png" alt="menu" class="center-wrap">
-
+	</div>
+	<div id="workProcess">
+		<h1 class="myAccount"><font color="fc7254">MY</font> ACCOUNTS</h1>
+	</div>
+		<div id="diagram">
+		<h1 class="myDiagram"><font color="fc7254">MY</font> DIAGRAM</h1>
+	</div>
+		<div id="celend">
+		<h1 class="myCelend"><font color="fc7254">MY</font> CELEND</h1>
 		</div>
-		<div class="workProcess"></div>
-		<div class="diagram"></div>
-		<div class="celend"></div>
 		
 	</div>
 	<footer></footer>
-     
+
 </body>
 </html>

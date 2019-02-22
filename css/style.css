@@ -1,18 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600&subset=cyrillic');
 #wrapper {
-  max-width: 100%;
-  font-family: Open sens;
+  font: 20pt 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   
 }
+a {
+    display: inline-block;
+    color:#797979;
+    line-height: 1;
+    text-decoration:none;
+    cursor: pointer;
+}
+a:after {
+    background-color: #fc7254;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+a:hover:after,
+a:focus:after {
+    width: 100%;
+}
  /*Первая страница*/
-.header {
+#header {
   display: grid;
   grid-template-columns: 70px 50px auto 50px 70px;
   grid-template-rows: 40px 30px 140px auto;
   width: 100%;
-  height: 920px;
+  height: 900px;
   background-color: #f5f5f5;
 }
 .logo {
@@ -21,11 +42,35 @@
   grid-column: 2;
   grid-row: 2 ;
 }
-.menu {
 
-  grid-column: 4;
-  grid-row: 2 ;
+/*---------Меню---------*/
+
+.menu {
+  position: fixed;
+  right: 70px;
+  top: 70px;
 }
+.hover-menu {
+  position: fixed;
+  right: 40px;
+  top: 90px;
+  display:none;
+  text-align: center;
+  
+}
+.menu:hover .hover-menu
+{
+  display: block;
+}
+li {
+list-style-type: none; 
+}
+ul {
+margin-left: 0; 
+padding-left: 0;
+}
+
+/*---------Меню---------*/
 .myBadget {
   justify-self: center;
   font: 50pt 'Open Sans', sans-serif;
@@ -34,29 +79,64 @@
   grid-row: 3 ;
 }
 .center-wrap{
-  width: 730px;
-  height: 450px;
+  width: 680px;
+  height: 400px;
   justify-self: center;
   grid-column: 3;
   grid-row: 4 ;
 }
 
 /*Вторая страница*/
-.workProcess {
+#workProcess {
   width: 100%;
-  height: 920px;
+  height: 900px;
   background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 70px  auto  70px;
+  grid-template-rows: 5px  auto; 
 }
+.myAccount {
+  font: 50pt 'Open Sans', sans-serif;
+  color: #6f6f6f;
+  grid-column: 2;
+  grid-row: 1 ;
+  justify-self: center;
 
+}
+/*Вторая страница*/
 /*Третья страница*/
-.diagram {
+#diagram {
   width: 100%;
   height: 920px;
   background-color: #f5f5f5;
+  display: grid;
+  grid-template-columns: 70px  auto  70px;
+  grid-template-rows: 5px  auto; 
 }
+.myDiagram {
+  font: 50pt 'Open Sans', sans-serif;
+  color: #6f6f6f;
+  grid-column: 2;
+  grid-row: 1 ;
+  justify-self: center;
+
+}
+
+/*Третья страница*/
 /*Четвертая страница*/
-.celend {
+#celend {
   width: 100%;
   height: 920px;
   background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 70px  auto  70px;
+  grid-template-rows: 5px  auto; 
+}
+.myCelend {
+  font: 50pt 'Open Sans', sans-serif;
+  color: #6f6f6f;
+  grid-column: 2;
+  grid-row: 1 ;
+  justify-self: center;
+
 }
