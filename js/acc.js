@@ -2,15 +2,14 @@ window.onload = init;
 let incom = [],
     expenses = [];
 
-function addLocal () {
-  let localValue = localStorage.getItem(incom);
-  console.log(localValue); //"myValue"
-  console.log(incom);
-}
-
 function init(){
     let button = document.getElementById("addButton")
     button.onclick = handleButtonClick;
+    let localValueP = localStorage.getItem('plus');
+    let localValueM = localStorage.getItem('minus');
+  console.log(localValueP);
+  console.log(localValueM); //"myValue"
+  console.log(incom);
 }
 
 function handleButtonClick() {
@@ -20,19 +19,18 @@ function handleButtonClick() {
       b = selectInput.value;
 
   if (b == "plus") {
-    incom.push(a);
+    incom.push(a, );
     let c = document.getElementById("incom").firstElementChild,
-        htmlCode = "<li>"+a+"</li>";
+        htmlCode = "<li>"+"+"+a+"</li>";
     c.insertAdjacentHTML('afterBegin',htmlCode);
+
     localStorage.setItem(b,incom);
   }
   else {
     expenses.push(a);
     let d = document.getElementById("expenses").firstElementChild,
-        htmlCode1 = "<li>"+a+"</li>";
+        htmlCode1 = "<li>"+"-"+a+"</li>";
     d.insertAdjacentHTML('afterBegin',htmlCode1);
     localStorage.setItem(b,expenses);
   }
-  addLocal ();
-  };
-  
+};

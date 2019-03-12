@@ -92,14 +92,15 @@ ul {
     height: 900px;
     background-color: #ffffff;
     display: grid;
-    grid-template-columns: 70px auto 70px;
-    grid-template-rows: 5px 250px auto;
+    grid-template-columns: 50px 300px auto 300px 50px;
+    grid-template-rows: 5px 150px auto;
+    justify-items: start;
 }
 
 .myAccount {
     font: 50pt 'Open Sans', sans-serif;
     color: #6f6f6f;
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1 ;
     justify-self: center;
 }
@@ -143,6 +144,44 @@ ul {
     border-radius: 20px;
     color: white;
     background: rgba(121, 121, 121, 0.79);
+}
+
+.expenses-div {
+  
+  width: 400px;
+  height: 270px;
+  padding: 0 15px ;
+  background: rgba(245, 245, 245);
+  border-radius: 10px;
+  font-size: 14px;
+   grid-column: 4;
+  grid-row: 3 ;
+  justify-self: end;
+}
+
+.joint-account {
+  
+  width: 300px;
+  height: 270px;
+  padding: 0 15px ;
+  background: rgba(245, 245, 245);
+  border-radius: 10px;
+  font-size: 14px;
+   grid-column: 3;
+  grid-row: 3 ;
+  justify-self: center;
+}
+.income-div {
+  
+  width: 400px;
+  height: 270px;
+  padding: 0 15px ;
+  background: rgba(245, 245, 245);
+  border-radius: 10px;
+  font-size: 14px;
+  grid-column: 2;
+  grid-row: 3 ;
+  overflow: auto;
 }
 
 #diagram {
