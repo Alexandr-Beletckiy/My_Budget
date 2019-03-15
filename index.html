@@ -29,46 +29,40 @@
                 </h1>
                 <img src="image/center-wrap.png" alt="menu" class="center-wrap">
             </div>
-            <div id="workProcess">
+            <div class="main-block" id="workProcess">
                 <h1 class="myAccount">
                     <font color="fc7254">MY</font>ACCOUNTS
                 </h1>
                 <div class="add">
                     <div class="form">
                         <form>
-                            <select id="selectInput">
-                                <option selected value="plus">Plus</option>
-                                <option value="minus">Minus</option>
+                            <select class="select" id="js_operator">
+                                <option selected value="+">+</option>
+                                <option value="-">-</option>
                             </select>
-                            <input type="text" id="NameInput" size="40" placeholder="Введите сумму" pattern="\d [0-9]">
-                            <!-- <input type="button" id="addButton"  value="Отправить"> -->
+                            <input class="text-input" type="text" id="js_input_val" size="40" placeholder="Введите сумму" pattern="\d [0-9]">
+                             <!--<input type="button" id="addButton"  value="Отправить">-->
                         </form>
                     </div>
                     <input type="image" id="addButton" src="image/add.png" alt="OK">
                     <!-- <img src="image/add.png" alt="add"> -->
                 </div>
-               
                 
-                
-                <div class="income-div" align="center">
-				<h2>Income</h2>
-				 <ol id="incom">
-                    <li></li>
+                <div class="incomes-div" align="center">
+				<h2>Incomes</h2>
+				 <ol id="js_incomes">
                 </ol>
-                <ol id="incom-date">
-                    <li></li>
-                </ol>
+                <!--<ol id="incomes-date">-->
+                <!--</ol>-->
 				</div>
-
-				<div class="joint-account" align="center">
-				<h2>Joint account</h2>
-				<p id="join"></p>
-				</div>
+				<!--<div class="joint-account" align="center">-->
+				<!--<h2>Joint account</h2>-->
+				<!--<p id="join"></p>-->
+				<!--</div>-->
 
 				<div class="expenses-div" align="center">
 				<h2>Expenses</h2>
-				<ol id="expenses">
-                    <li></li>
+				<ol id="js_expenses">
                 </ol>
 				</div>
 				
