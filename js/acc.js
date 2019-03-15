@@ -1,17 +1,29 @@
-window.onload = init;
-let incom = [],
+// window.onload = init;  //Загрузаеться страница и во время загрузки вызываеться функция
+
+let incom = [], // Создаем два массива Плюс и Минус
     expenses = [];
 
-function init(){
+function init(){    
+  let plus = [], // Создаем два массива Плюс и Минус
+      minus = [];
+    plus.push(localStorage.getItem('plus')); //Записываем данные из хранилища
+    minus.push(localStorage.getItem('minus'));
     let button = document.getElementById("addButton")
     button.onclick = handleButtonClick;
-    let localValueP = localStorage.getItem('plus');
-    let localValueM = localStorage.getItem('minus');
-  console.log(localValueP);
-  console.log(localValueM); //"myValue"
-  console.log(incom);
+
+    incom = plus;
+    expenses = minus;
+  console.log("plus", plus); //Проверяем
+  console.log("minus", minus);
 }
 
+init();
+//Действия при загрузке закончены
+
+    incom.slice()
+console.log("incom", incom);
+console.log("expenses", expenses);
+//Создаем функцию нажатия кнопки
 function handleButtonClick() {
   let textInput = document.getElementById("NameInput"),
       a = textInput.value,
@@ -19,12 +31,13 @@ function handleButtonClick() {
       b = selectInput.value;
 
   if (b == "plus") {
-    incom.push(a, );
-    let c = document.getElementById("incom").firstElementChild,
-        htmlCode = "<li>"+"+"+a+"</li>";
-    c.insertAdjacentHTML('afterBegin',htmlCode);
+    exec(incom, )
+    // incom.push(a,);
+    // let c = document.getElementById("incom").firstElementChild,
+    //     htmlCode = "<li>"+"+"+a+"</li>";
+    // c.insertAdjacentHTML('afterBegin',htmlCode);
 
-    localStorage.setItem(b,incom);
+    // localStorage.setItem(b,incom);
   }
   else {
     expenses.push(a);
@@ -34,3 +47,12 @@ function handleButtonClick() {
     localStorage.setItem(b,expenses);
   }
 };
+
+function exec(mass, elem, val, flag) {
+  let d = document.getElementById(flag).firstElementChild,
+  mass.push(val);
+  htmlCode = "<li>"+"+"+val+"</li>";
+
+  elem.insertAdjacentHTML('afterBegin', htmlCode1);
+  localStorage.setItem(flag, mass);
+} 
