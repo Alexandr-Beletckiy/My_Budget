@@ -25,32 +25,24 @@ function handleClick() {
         value = valElem.value;
 
     if (!checkValue(value)) {
-        alert('Пожалуйста используйте только цифры.');
+        alert('Используйте только цифры.');
         valElem.value = '';
 
         return;
     }
 
-    let elemId = '';
-    let itemArr = [];
-
     switch (operator) {
         case '+':
             incomesArr.push(value);
-            elemId = INC_ID;
-            itemArr = incomesArr;
+            appendHtml(INC_ID, value);
+            addToLocalStorage(INC_STORAGE_NAME, incomesArr);
             break;
         case '-' :
             expensesArr.push(value);
-            elemId = EXP_ID;
-            itemArr = expensesArr;
+            appendHtml(EXP_ID, value);
+            addToLocalStorage(EXP_STORAGE_NAME, expensesArr);
             break;
-        default:
-            return;
     }
-
-    addToLocalStorage(elemId, itemArr);
-    appendHtml(elemId, value);
 }
 
 function itemsToDisplay(elemId, itemsArr) {
@@ -66,9 +58,7 @@ function appendHtml(elemId, val) {
     element.insertAdjacentHTML('afterbegin', html);
 }
 
-function addToLocalStorage(elemId, item) {
-    let elemName = (elemId === INC_ID) ? INC_STORAGE_NAME : EXP_STORAGE_NAME;
-
+function addToLocalStorage(elemName, item) {
     localStorage.setItem(elemName, item);
 }
 
