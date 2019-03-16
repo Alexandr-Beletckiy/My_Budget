@@ -4,6 +4,7 @@ let incom = [], // Создаем два массива Плюс и Минус
     expenses = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function init(){    
   let plus = [], // Создаем два массива Плюс и Минус
       minus = [];
@@ -21,6 +22,17 @@ function addLocal () {
   let localValue = localStorage.getItem(incom);
   console.log(localValue); //"myValue"
   console.log(incom);
+=======
+function addLocal () {
+  let localValue = localStorage.getItem(incom);
+  console.log(localValue); //"myValue"
+  console.log(incom);
+}
+
+function init(){
+    let button = document.getElementById("addButton")
+    button.onclick = handleButtonClick;
+>>>>>>> parent of 9891254... 12.03.2019
 }
 
 function init(){
@@ -44,6 +56,7 @@ function handleButtonClick() {
 
   if (b == "plus") {
 <<<<<<< HEAD
+<<<<<<< HEAD
     exec(incom, )
     // incom.push(a,);
     // let c = document.getElementById("incom").firstElementChild,
@@ -52,6 +65,8 @@ function handleButtonClick() {
 
     // localStorage.setItem(b,incom);
 =======
+=======
+>>>>>>> parent of 9891254... 12.03.2019
     incom.push(a);
     let c = document.getElementById("incom").firstElementChild,
         htmlCode = "<li>"+a+"</li>";
@@ -67,6 +82,7 @@ function handleButtonClick() {
     localStorage.setItem(b,expenses);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 
 function exec(mass, elem, val, flag) {
@@ -77,6 +93,11 @@ function exec(mass, elem, val, flag) {
   elem.insertAdjacentHTML('afterBegin', htmlCode1);
   localStorage.setItem(flag, mass);
 } 
+=======
+  addLocal ();
+  };
+  
+>>>>>>> parent of 9891254... 12.03.2019
 =======
   addLocal ();
   };
